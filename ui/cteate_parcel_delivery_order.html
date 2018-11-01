@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sign Out</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="column one">
+            <div class="info">
+                <p>
+                    <img src="avatar.png" alt="Avatar" class="avatar">
+                    <br>
+                    <b>
+                        Welcome
+                        <br>
+                        User 1
+                    </b>
+                </p>
+                <hr>
+                <P>
+                    Would you like to create a new parcel delivery order?
+                    Please fill in all the details on the given form
+                </P>
+            </div>
+        </div>
+        <div class="column two">
+            <div class="order-item">
+                <form>
+                    <div class="form-container">
+                        <h1>Delivery Order</h1>
+                        <p>Please fill in this form and submit all details to facilitate successfull delivery of the
+                            order.</p>
+                        <hr>
+
+                        <label for="origin"><b>Pick up location :</b></label>
+                        <input type="text" placeholder="Please enter the pick up location" name="origin" required>
+
+                        <label for="destination"><b>Destination :</b></label>
+                        <input type="text" placeholder="Please the destination " name="destination" required>
+
+                        <label for="sent_to:"><b>Sent to :</b></label>
+                        <input type="text" placeholder="Please Enter name of person to pick the parcel" name="sent_to"
+                            required>
+
+                        <label for="sent_to:"><b>Package details :</b></label>
+                        <p>Please give us a small description of what the package is.</p>
+                        <textarea></textarea>
+                        <hr>
+
+                        <button type="submit" class="registerbtn">Submit</button>
+                    </div>
+
+                </form>
+
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
