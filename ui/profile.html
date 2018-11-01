@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sign Out</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="column one">
+            <div class="info">
+                <p>
+                    <img src="avatar.png" alt="Avatar" class="avatar">
+                    <br>
+                    <b>
+                        Welcome
+                        <br>
+                        User 1
+                    </b>
+                </p>
+                <hr>
+                <P>
+                    Would you like to create a new parcel delivery order?
+                </P>
+
+            </div>
+            <div class="add-order"><a href="cteate_parcel_delivery_order.html">Create a new delivery order</a><i class="fa fa-plus"></i></div>
+        </div>
+        <div class="column two">
+            <div class="order-item">
+
+                <span id="tab-1" class="tab-switch"></span>
+                <a href="#tab-1" class="tab-link">Delivered orders</a>
+                <div class="tab-content">
+                    <div class="order-item">
+                        <p>Here are all your delivered parcel orders</p>
+                        <br>
+                        <div class="order-summary" id="order-id">1</div>
+                        <div class="order-summary" id="order-status">
+                            <span class="label success">Delivered</span>
+                        </div>
+                        <div class="order-summary" id="order-location">------</div>
+                    </div>
+                </div>
+
+                <span id="tab-2" class="tab-switch"></span>
+                <a href="#tab-2" class="tab-link">Pending delivery</a>
+                <div class="tab-content">
+                    <div class="order-item">
+                        <p>Here are all your parcel orders pending delivery</p>
+                        <br>
+                        <div class="order-summary" id="order-id">2</div>
+                        <div class="order-summary" id="order-status">
+                            <span class="label other">pending delivery</span>
+                        </div>
+                        <div class="order-summary" id="order-location">Nakuru</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
