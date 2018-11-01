@@ -44,7 +44,13 @@
                 <a href="#tab-1" class="tab-link">Delivered orders</a>
                 <div class="tab-content">
                     <div class="order-item">
-                        <p>Here are all your delivered parcel orders</p>
+                        <div class="order-summary-header" id="order-id"><b>ID</b></div>
+                        <div class="order-summary-header" id="order-status"><b>status</b></div>
+                        <div class="order-summary-header" id="order-location"><b>Current location</b></div>
+                    </div>
+                    <hr>
+                    <div class="order-item">
+                        <p>Here are all your <b>delivered</b>> parcel orders <b>total : 1</b></p>
                         <br>
                         <div class="order-summary" id="order-id">1</div>
                         <div class="order-summary" id="order-status">
@@ -58,8 +64,42 @@
                 <a href="#tab-2" class="tab-link">Pending delivery</a>
                 <div class="tab-content">
                     <div class="order-item">
-                        <p>Here are all your parcel orders pending delivery</p>
+                        <div class="order-summary-header" id="order-id"><b>ID</b></div>
+                        <div class="order-summary-header" id="order-status"><b>status</b></div>
+                        <div class="order-summary-header" id="order-location"><b>Current location</b></div>
+                    </div>
+                    <hr>
+                    <div class="order-item">
+                        <p>Here are all your parcel orders <b>pending delivery</b> total : <b>1</b></p>
                         <br>
+                        <div class="order-summary" id="order-id">2</div>
+                        <div class="order-summary" id="order-status">
+                            <span class="label other">pending delivery</span>
+                        </div>
+                        <div class="order-summary" id="order-location">Nakuru</div>
+                    </div>
+                </div>
+
+                <span id="tab-3" class="tab-switch"></span>
+                <a href="#tab-3" class="tab-link">All parcel orders</a>
+                <div class="tab-content">
+                    <div class="order-item">
+                        <div class="order-summary-header" id="order-id"><b>ID</b></div>
+                        <div class="order-summary-header" id="order-status"><b>status</b></div>
+                        <div class="order-summary-header" id="order-location"><b>Current location</b></div>
+                    </div>
+                    <hr>
+                    <div class="order-item">
+                        <p>Here are <b>all</b> your parcel orders<b> total : 2</b></p>
+                        <br>
+                        <div class="order-summary" id="order-id">1</div>
+                        <div class="order-summary" id="order-status">
+                            <span class="label success">Delivered</span>
+                        </div>
+                        <div class="order-summary" id="order-location">----</div>
+                    </div>
+                    <hr>
+                    <div class="order-item">
                         <div class="order-summary" id="order-id">2</div>
                         <div class="order-summary" id="order-status">
                             <span class="label other">pending delivery</span>
