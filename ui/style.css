@@ -125,6 +125,14 @@ footer {
   text-align: center;
 }
 
+.one-a {
+  width: 20%;
+  height: 500px;
+  padding: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
 .info {
   height: 300px;
   width: 300px;
@@ -171,6 +179,11 @@ footer {
 
 .two {
   width: 60%;
+  padding: 20px;
+}
+
+.two-a {
+  width: 80%;
   padding: 20px;
 }
 
@@ -304,4 +317,20 @@ footer {
   height: 1px;
   background: #ccc;
   margin: 2px 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
