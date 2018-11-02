@@ -55,7 +55,7 @@
 
                         <label><b>Status :</b></label>
                         <br>
-                        <span class="label success">Delivered</span>
+                        <span class="label other">Pending Delivery</span>
 
                         <label><b>Price :</b></label>
                         <br>
@@ -77,7 +77,15 @@
                         <label><b>Sender :</b></label>
                         <p>User 1</p>
 
-                        <button disabled type="submit" class="order-details-btn cancel"><i class="fas fa-times"></i>
+                        <form>
+                            <label for="weight"><b>Cancelation Request :</b></label>
+                            <select name="weight-cat">
+                                <option value="not_canceled">Not Canceled</option>
+                                <option value="wcancel">Cancel order</option>
+                            </select>
+                        </form>
+
+                        <button type="submit" class="order-details-btn cancel"><i class="fas fa-times"></i>
                             Cancel Order</button>
                         <button disabled type="submit" class="order-details-btn edit">Change Destination</button>
                 </div>
