@@ -1,108 +1,119 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
-        crossorigin="anonymous">
-</head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
+  <body>
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sign Out</a></li>
-        </ul>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sign Out</a></li>
+      </ul>
     </nav>
     <div class="container">
-        <div class="column one">
-            <div id="user" class="info">
-
-            </div>
-            <div class="add-order"><a href="cteate_parcel_delivery_order.html">Create a new delivery order</a><i class="fa fa-plus"></i></div>
+      <div class="column one">
+        <div id="user" class="info"></div>
+        <div class="add-order">
+          <a href="cteate_parcel_delivery_order.html"
+            >Create a new delivery order</a
+          ><i class="fa fa-plus"></i>
         </div>
-        <div class="column two">
+      </div>
+      <div class="column two">
+        <div class="order-item">
+          <span id="tab-1" class="tab-switch"></span>
+          <a
+            href="#tab-1"
+            class="tab-link"
+            onclick="parcels.get_delivered_parcels()"
+            >Delivered orders</a
+          >
+          <div class="tab-content">
             <div class="order-item">
-
-                <span id="tab-1" class="tab-switch"></span>
-                <a href="#tab-1" class="tab-link">Delivered orders</a>
-                <div class="tab-content">
-                    <div class="order-item">
-                        <div class="order-summary-header" id="order-id"><b>ID</b></div>
-                        <div class="order-summary-header" id="order-status"><b>status</b></div>
-                        <div class="order-summary-header" id="order-location"><b>Current location</b></div>
-                    </div>
-                    <hr>
-                    <div class="order-item">
-                        <p>Here are all your <b>delivered</b>> parcel orders <b>total : 1</b></p>
-                        <br>
-                        <div class="order-summary" id="order-id">1</div>
-                        <div class="order-summary" id="order-status">
-                            <span class="label success">Delivered</span>
-                        </div>
-                        <div class="order-summary" id="order-location">------</div>
-                    </div>
-                </div>
-
-                <span id="tab-2" class="tab-switch"></span>
-                <a href="#tab-2" class="tab-link">Pending delivery</a>
-                <div class="tab-content">
-                    <div class="order-item">
-                        <div class="order-summary-header" id="order-id"><b>ID</b></div>
-                        <div class="order-summary-header" id="order-status"><b>status</b></div>
-                        <div class="order-summary-header" id="order-location"><b>Current location</b></div>
-                    </div>
-                    <hr>
-                    <div class="order-item">
-                        <p>Here are all your parcel orders <b>pending delivery</b> total : <b>1</b></p>
-                        <br>
-                        <div class="order-summary" id="order-id">2</div>
-                        <div class="order-summary" id="order-status">
-                            <span class="label other">pending delivery</span>
-                        </div>
-                        <div class="order-summary" id="order-location">Nakuru</div>
-                    </div>
-                </div>
-
-                <span id="tab-3" class="tab-switch"></span>
-                <a href="#tab-3" class="tab-link">All parcel orders</a>
-                <div class="tab-content">
-                    <div class="order-item">
-                        <div class="order-summary-header" id="order-id"><b>ID</b></div>
-                        <div class="order-summary-header" id="order-status"><b>status</b></div>
-                        <div class="order-summary-header" id="order-location"><b>Current location</b></div>
-                    </div>
-                    <hr>
-                    <div class="order-item">
-                        <p>Here are <b>all</b> your parcel orders<b> total : 2</b></p>
-                        <br>
-                        <div class="order-summary" id="order-id">1</div>
-                        <div class="order-summary" id="order-status">
-                            <span class="label success">Delivered</span>
-                        </div>
-                        <div class="order-summary" id="order-location">----</div>
-                    </div>
-                    <hr>
-                    <div class="order-item">
-                        <div class="order-summary" id="order-id">2</div>
-                        <div class="order-summary" id="order-status">
-                            <span class="label other">pending delivery</span>
-                        </div>
-                        <div class="order-summary" id="order-location">Nakuru</div>
-                    </div>
-                </div>
-
+              <div class="order-summary-header" id="order-id"><b>ID</b></div>
+              <div class="order-summary-header" id="order-status">
+                <b>status</b>
+              </div>
+              <div class="order-summary-header" id="order-location">
+                <b>Current location</b>
+              </div>
             </div>
+            <hr />
+            <div id="delivered-user-orders" class="order-item">
+              <p id="delivered-user-parcels">
+                Here are all your <b>delivered</b> parcel orders <b>total : </b>
+              </p>
+            </div>
+          </div>
+
+          <span id="tab-2" class="tab-switch"></span>
+          <a
+            href="#tab-2"
+            class="tab-link"
+            onclick="parcels.get_on_transit_parcel()"
+            >Pending delivery</a
+          >
+          <div class="tab-content">
+            <div class="order-item">
+              <div class="order-summary-header" id="order-id"><b>ID</b></div>
+              <div class="order-summary-header" id="order-status">
+                <b>status</b>
+              </div>
+              <div class="order-summary-header" id="order-location">
+                <b>Current location</b>
+              </div>
+            </div>
+            <hr />
+            <div id="pd-user-orders" class="order-item">
+              <p id="pd-user-parcels">
+                Here are all your parcel orders <b>pending delivery</b> total :
+                <b> </b>
+              </p>
+            </div>
+          </div>
+
+          <span id="tab-3" class="tab-switch"></span>
+          <a
+            href="#tab-3"
+            id="user-all"
+            class="tab-link"
+            onclick="parcels.get_user_parcel()"
+            >All parcel orders</a
+          >
+          <div class="tab-content">
+            <p id="notification"></p>
+
+            <div class="order-item">
+              <div class="order-summary-header" id="order-id"><b>ID</b></div>
+              <div class="order-summary-header" id="order-status">
+                <b>status</b>
+              </div>
+              <div class="order-summary-header" id="order-location">
+                <b>Current location</b>
+              </div>
+            </div>
+            <hr />
+            <div id="all-user-orders" class="order-item">
+              <p id="all-user-parcels">
+                Here are <b>all</b> your parcel orders<b> total : </b>
+              </p>
+              <br />
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
-    <footer>
-
-    </footer>
+    <footer></footer>
     <script src="js/parcels.js"></script>
-</body>
-
+  </body>
 </html>
