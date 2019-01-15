@@ -14,6 +14,8 @@ function get_one_order() {
   event.preventDefault();
   let parcel_id = location.search.split("parcel_id=")[1];
 
+  window.localStorage.setItem("parcel_id", parcel_id);
+
   let par = document.createElement("p");
   par.innerHTML = `
                 <p>
@@ -62,6 +64,40 @@ function get_one_order() {
           desc.textContent += data.Data.parcel_details;
           weight.textContent += data.Data.weight;
           sender.textContent += data.Data.localStorage.getItem("user_name");
+        });
+      }
+      if (!response.ok) {
+        return response.json().then(data => {
+          for (const key of Object.keys(data)) {
+            let span = document.createElement("span");
+            span.setAttribute("class", "message");
+            span.innerHTML = `
+                    <strong>${key}</strong> : <em>${data[key]}</em><br>
+              `;
+            document.getElementById("notification").appendChild(span);
+          }
+        });
+      }
+    })
+    .catch(err => {
+      console.log("ERROR:", err.message);
+    });
+}
+
+function cancel_order() {
+  event.preventDefault();
+  let cancel_url =
+    base_uri + "parcels/" + localStorage.getItem("parcel_id") + "/cancel";
+
+  fetch(cancel_url, {
+    mode: "cors",
+    method: "PUT",
+    headers: h
+  })
+    .then(response => {
+      if (response.ok) {
+        return response.json().then(data => {
+          console.log(data);
         });
       }
       if (!response.ok) {

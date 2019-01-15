@@ -66,15 +66,7 @@
                             <input type="text" placeholder="Please enter a new destination for your parcel" name="new-dest">
                         </form>
 
-                        <form>
-                            <label for="weight"><b>Cancelation Request :</b></label>
-                            <select name="weight-cat">
-                                <option value="not_canceled">Not Canceled</option>
-                                <option value="wcancel">Cancel order</option>
-                            </select>
-                        </form>
-
-                        <button type="submit" class="order-details-btn cancel"><i class="fas fa-times"></i>
+                        <button type="submit" class="order-details-btn cancel" onclick="cancel_order()"><i class="fas fa-times"></i>
                             Cancel Order</button>
                         <button type="submit" class="order-details-btn edit">Change Destination</button>
 
