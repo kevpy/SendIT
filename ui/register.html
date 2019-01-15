@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title></title>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    <div class="form-card">
+      <form action="">
+        <div class="form-container">
+          <h1>Register</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr />
+          <p id="notification"></p>
+
+          <label for="name"><b>Name</b></label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Enter your Name"
+            name="name"
+            required
+          />
+
+          <label for="email"><b>Email</b></label>
+          <input
+            id="email"
+            type="text"
+            placeholder="Enter Email"
+            name="email"
+            required
+          />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            id="password"
+            name="psw"
+            required
+          />
+
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input
+            type="password"
+            placeholder="Repeat Password"
+            id="password-rpt"
+            name="psw-repeat"
+            required
+          />
+          <hr />
+
+          <button
+            type="submit"
+            id="signup"
+            class="registerbtn"
+            onclick="auth.signup()"
+          >
+            Register
+          </button>
+        </div>
+
+        <div class="container signin">
+          <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+        </div>
+      </form>
+    </div>
+    <footer></footer>
+    <script src="js/auth.js"></script>
+  </body>
+</html>
