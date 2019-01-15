@@ -98,9 +98,12 @@ const parcels = {
               div.setAttribute("class", "test");
               div.innerHTML = `
                       <div>
-                        <div class="order-summary" id="order-id">${
+                        <div class="order-summary" id="order-id">
+                        <a href="order_details.html?parcel_id=${
                           item.parcel_id
-                        }</div>
+                        }">${item.parcel_id}</a>
+                        
+                        </div>
                         <div class="order-summary" id="order-status">
                             <span class="label other">${item.status}</span>
                         </div>
