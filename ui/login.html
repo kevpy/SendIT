@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>SendIT</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="register.html">Signup</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="register.html">Signup</a></li>
+      </ul>
     </nav>
     <div class="form-card">
-        <form action="profile.html">
-            <div class="form-container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+      <form action="">
+        <div class="form-container">
+          <p id="notification"></p>
+          <label for="uname"><b>Email</b></label>
+          <input
+            type="text"
+            id="email"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
 
-                <button type="submit">Login</button>
-
-            </div>
-        </form>
-
+          <button type="submit" id="signup" onclick="auth.login()">
+            Login
+          </button>
+        </div>
+      </form>
     </div>
-    <footer>
-
-    </footer>
-</body>
-
+    <footer></footer>
+    <script src="js/auth.js"></script>
+  </body>
 </html>
