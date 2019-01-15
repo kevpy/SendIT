@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+</head>
+
+<body onload="get_all_parcels()">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sign Out</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div id="user"></div>
+        <div id="notification"></div>
+                
+
+        <div class="column two">
+            <h2>Pending Delivery Orders</h2>
+
+            <table id="orders">
+                <tr>
+                    <th><b>Order Id</b></th>
+                    <th><b>Pickup Location</b></th>
+                    <th><b>Destination</b></th>
+                    <th><b>Present Location</b></th>
+                    <th><b> Status</b></th>
+                    <th><b> change p location</b></th>
+                    <th><b> change status</b></th>
+                    <!-- <th><b></b></th> -->
+                </tr>
+                
+
+            </table>
+            <br>
+            <hr>
+            <br>
+            <h2>Orders Delivered</h2>
+
+            <hr>
+
+            <table id="delivered">
+                <tr>
+                    <th><b>Order Id</b></th>
+                    <th><b>Pickup Location</b></th>
+                    <th><b>Destination</b></th>
+                    <th><b>Current Location</b></th>
+                    <th><b> Status</b></th>
+                    <!-- <th><b></b></th> -->
+                </tr>                
+
+            </table>
+
+        </div>
+    </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

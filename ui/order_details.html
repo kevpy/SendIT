@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+</head>
+
+<body onload="get_one_order()">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sign Out</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="column one">
+            <div id="user" class="info">
+
+            </div>
+        </div>
+        <div class="column three">
+            <div class="order-item">
+                <div class="details-card">
+                    <div id="notification"></div>
+                    <h3 id="h-id">Order-id: </h1>
+                        <p id="details">This is the details of your order and it's current status <b>Order-id: </b></p>
+
+                        <hr>
+                        <label><b>Pick up location :</b></label>
+                        <p id="p-loc"></p>
+
+                        <label><b>Destination :</b></label>
+                        <p id="dest"></p>
+
+                        <label><b>Current location :</b></label>
+                        <p id="c-loc"></p>
+
+                        <label><b>Status :</b></label>
+                        <br>
+                        <span id="status" class="label other"></span>
+
+                        <label><b>Price :</b></label>
+                        <br>
+                        <span id="price" class="label price">  </span>
+                        <br>
+
+                        <label><b>Description :</b></label>
+                        <p id="desc">
+                            
+
+                        </p>
+
+                        <label><b>Weight :</b></label>
+                        <p id="weight"></p>
+
+                        <label><b>Sender :</b></label>
+                        <p id="sender"></p>
+
+                        <form>
+                            <label for="new-dest"><b>New Destination</b></label>
+                            <input type="text" placeholder="Please enter a new destination for your parcel" name="new-dest">
+                        </form>
+
+                        <form>
+                            <label for="weight"><b>Cancelation Request :</b></label>
+                            <select name="weight-cat">
+                                <option value="not_canceled">Not Canceled</option>
+                                <option value="wcancel">Cancel order</option>
+                            </select>
+                        </form>
+
+                        <button type="submit" class="order-details-btn cancel"><i class="fas fa-times"></i>
+                            Cancel Order</button>
+                        <button type="submit" class="order-details-btn edit">Change Destination</button>
+
+                        <div class="add-order"><a href="profile.html">Go back to your profile</a></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="js/order_details.js"></script>
+</body>
+
+</html>
