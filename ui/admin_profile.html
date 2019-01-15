@@ -10,7 +10,7 @@
         crossorigin="anonymous">
 </head>
 
-<body>
+<body onload="get_all_parcels()">
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
@@ -18,86 +18,25 @@
         </ul>
     </nav>
     <div class="container">
-        <div class="column one">
-            <div class="info">
-                <p>
-                    <img src="avatar.png" alt="Avatar" class="avatar">
-                    <br>
-                    <b>
-                        Welcome
-                        <br>
-                        Admin 1
-                    </b>
-                </p>
-                <hr>
-                <P>
-                    You can review the order details on the provided table
-                </P>
+        <div id="user"></div>
+        <div id="notification"></div>
+                
 
-            </div>
-        </div>
         <div class="column two">
             <h2>Pending Delivery Orders</h2>
 
-            <button type="submit" class="order-details-btn edit">Submit Changes</button>
-
-            <table>
+            <table id="orders">
                 <tr>
                     <th><b>Order Id</b></th>
                     <th><b>Pickup Location</b></th>
                     <th><b>Destination</b></th>
                     <th><b>Present Location</b></th>
                     <th><b> Status</b></th>
+                    <th><b> change p location</b></th>
+                    <th><b> change status</b></th>
                     <!-- <th><b></b></th> -->
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Nairobi</td>
-                    <td>Nakuru</td>
-                    <td contenteditable="true">-----</td>
-                    <td contenteditable="true">
-                        <select name="status" id="">
-                            <option value="pending">Pending Delivery</option>
-                            <option value="delivered">Delivered</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Nairobi</td>
-                    <td>Kisumu</td>
-                    <td contenteditable="true">Kericho</td>
-                    <td contenteditable="true">
-                        <select name="status" id="">
-                            <option value="pending">Pending Delivery</option>
-                            <option value="delivered">Delivered</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Eldoret</td>
-                    <td>Mombasa</td>
-                    <td contenteditable="true">Nairobi</td>
-                    <td contenteditable="true">
-                        <select name="status" id="">
-                            <option value="pending">Pending Delivery</option>
-                            <option value="delivered">Delivered</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Nyeri</td>
-                    <td>Lodwar</td>
-                    <td contenteditable="true">Kitale</td>
-                    <td contenteditable="true">
-                        <select name="status" id="">
-                            <option value="pending">Pending Delivery</option>
-                            <option value="delivered">Delivered</option>
-                        </select>
-                    </td>
-                </tr>
+                
 
             </table>
             <br>
@@ -107,7 +46,7 @@
 
             <hr>
 
-            <table>
+            <table id="delivered">
                 <tr>
                     <th><b>Order Id</b></th>
                     <th><b>Pickup Location</b></th>
@@ -115,35 +54,7 @@
                     <th><b>Current Location</b></th>
                     <th><b> Status</b></th>
                     <!-- <th><b></b></th> -->
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Nairobi</td>
-                    <td>Nakuru</td>
-                    <td>-----</td>
-                    <td><span class="label success">Delivered</span></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Nairobi</td>
-                    <td>Kisumu</td>
-                    <td>Kericho</td>
-                    <td><span class="label success">Delivered</span></td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Eldoret</td>
-                    <td>Mombasa</td>
-                    <td>Nairobi</td>
-                    <td><span class="label success">Delivered</span></td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Nyeri</td>
-                    <td>Lodwar</td>
-                    <td>Kitale</td>
-                    <td><span class="label success">Delivered</span></td>
-                </tr>
+                </tr>                
 
             </table>
 
@@ -153,6 +64,7 @@
     <footer>
 
     </footer>
+    <script src="js/admin.js"></script>
 </body>
 
 </html>

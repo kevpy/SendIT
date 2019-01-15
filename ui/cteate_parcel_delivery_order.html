@@ -19,57 +19,40 @@
     </nav>
     <div class="container">
         <div class="column one">
-            <div class="info">
-                <p>
-                    <img src="avatar.png" alt="Avatar" class="avatar">
-                    <br>
-                    <b>
-                        Welcome
-                        <br>
-                        User 1
-                    </b>
-                </p>
-                <hr>
-                <P>
-                    Would you like to create a new parcel delivery order?
-                    Please fill in all the details on the given form
-                </P>
+            <div id="user" class="info">
+                
             </div>
         </div>
         <div class="column two">
             <div class="order-item">
-                <form>
+                <form action="">
                     <div class="form-container">
                         <h1>Delivery Order</h1>
                         <p>Please fill in this form and submit all details to facilitate successfull delivery of the
                             order.</p>
                         <hr>
 
-                        <label for="origin"><b>Pick up location :</b></label>
-                        <input type="text" placeholder="Please enter the pick up location" name="origin" required>
+                        <p id="notification"></p>
+
+                        <label for="pickup_location"><b>Pick up location :</b></label>
+                        <input type="text" id="pickup_location" placeholder="Please enter the pick up location" name="pickup_location" required>
 
                         <label for="destination"><b>Destination :</b></label>
-                        <input type="text" placeholder="Please the destination " name="destination" required>
+                        <input type="text" id="destination" placeholder="Please enter the destination " name="destination" required>
 
                         <label for="weight"><b>Weight Category :</b></label>
-                        <select name="weight-cat">
-                            <option value="w-und-5">Weight under 5 kgs</option>
-                            <option value="w-5-10">Weight between 5 - 10 kgs</option>
-                            <option value="w-11-25">Weight between 11 - 26 kgs</option>
-                            <option value="w-26-50">Weight between 26 - 50 kgs</option>
-                            <option value="w-ov-50">Weight over 50 kgs</option>
-                        </select>
+                        <input type="text" id="weight" placeholder="Please enter the weight " name="weight" required>
 
                         <label for="sent_to:"><b>Sent to :</b></label>
-                        <input type="text" placeholder="Please Enter name of person to pick the parcel" name="sent_to"
+                        <input type="text" id="recipient" placeholder="Please Enter name of person to pick the parcel" name="sent_to"
                             required>
 
                         <label for="sent_to:"><b>Package details :</b></label>
                         <p>Please give us a small description of what the package is.</p>
-                        <textarea></textarea>
+                        <textarea id="details"></textarea>
                         <hr>
 
-                        <button type="submit" class="registerbtn">Submit</button>
+                        <button type="submit" class="registerbtn" onclick="parcels.create_parcel()">Submit</button>
                     </div>
 
                 </form>
@@ -83,6 +66,8 @@
     <footer>
 
     </footer>
+    <script src="js/parcels.js"></script>
+    
 </body>
 
 </html>
