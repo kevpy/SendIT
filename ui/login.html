@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SendIT</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="register.html">Signup</a></li>
+      </ul>
+    </nav>
+    <div class="form-card">
+      <form action="">
+        <div class="form-container">
+          <p id="notification"></p>
+          <label for="uname"><b>Email</b></label>
+          <input
+            type="text"
+            id="email"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+
+          <button type="submit" id="signup" onclick="auth.login()">
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+    <footer></footer>
+    <script src="js/auth.js"></script>
+  </body>
+</html>
