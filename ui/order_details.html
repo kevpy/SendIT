@@ -63,12 +63,12 @@
 
                         <form>
                             <label for="new-dest"><b>New Destination</b></label>
-                            <input type="text" placeholder="Please enter a new destination for your parcel" name="new-dest">
+                            <input id="new-dest" type="text" placeholder="Please enter a new destination for your parcel" name="new-dest">
                         </form>
 
                         <button type="submit" class="order-details-btn cancel" onclick="cancel_order()"><i class="fas fa-times"></i>
                             Cancel Order</button>
-                        <button type="submit" class="order-details-btn edit">Change Destination</button>
+                        <button type="submit" class="order-details-btn edit" onclick="change_destination()">Change Destination</button>
 
                         <div class="add-order"><a href="profile.html">Go back to your profile</a></div>
                 </div>

@@ -117,3 +117,45 @@ function cancel_order() {
       console.log("ERROR:", err.message);
     });
 }
+
+function change_destination() {
+  event.preventDefault();
+  let change_dest_url =
+    base_uri + "parcels/" + localStorage.getItem("parcel_id") + "/destination";
+  // console.log(change_dest_url);
+
+  let new_dest = document.getElementById("new-dest").value;
+
+  console.log(new_dest);
+
+  let dest_data = JSON.stringify({ location: new_dest });
+
+  fetch(change_dest_url, {
+    mode: "cors",
+    method: "PUT",
+    headers: h,
+    body: dest_data
+  })
+    .then(response => {
+      if (response.ok) {
+        return response.json().then(data => {
+          console.log(data);
+        });
+      }
+      if (!response.ok) {
+        return response.json().then(data => {
+          for (const key of Object.keys(data)) {
+            let span = document.createElement("span");
+            span.setAttribute("class", "message");
+            span.innerHTML = `
+                    <strong>${key}</strong> : <em>${data[key]}</em><br>
+              `;
+            document.getElementById("notification").appendChild(span);
+          }
+        });
+      }
+    })
+    .catch(err => {
+      console.log("ERROR:", err.message);
+    });
+}
