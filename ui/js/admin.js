@@ -57,7 +57,8 @@ window.onload = function get_all_parcels() {
                             }</option>
                         </select>
                     </td>
-                    <td><a href="#" onclick="change_location(this)";><b>Update</b></a></td>
+                    <td><a href="#" onclick="change_location(this)";><b>Update location</b></a></td>
+                    <td><a href="#" onclick="update_status(this)";><b>Update status</b></a></td>
             `;
             document.getElementById("orders").appendChild(tr);
           });
@@ -116,6 +117,37 @@ function change_location(ele) {
     headers: h,
     body: pLocData
   })
+    .then(response => {
+      if (response.ok) {
+        return response.json().then(data => {
+          console.log(data);
+        });
+      }
+      if (!response.ok) {
+        return response.json().then(data => {
+          for (const key of Object.keys(data)) {
+            let span = document.createElement("span");
+            span.setAttribute("class", "message");
+            span.innerHTML = `
+                    <strong>${key}</strong> : <em>${data[key]}</em><br>
+              `;
+            document.getElementById("notification").appendChild(span);
+          }
+        });
+      }
+    })
+    .catch(err => {
+      console.log("ERROR:", err.message);
+    });
+}
+
+function update_status(ele) {
+  event.preventDefault();
+  let parcel_id = ele.parentNode.parentNode.children[0].innerHTML;
+
+  let update_status_url = base_uri + "parcels/" + parcel_id + "/status";
+
+  fetch(update_status_url, { mode: "cors", method: "PUT", headers: h })
     .then(response => {
       if (response.ok) {
         return response.json().then(data => {
