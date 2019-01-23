@@ -101,7 +101,7 @@ window.onload = function get_all_parcels() {
 
 function change_location(ele) {
   let parcel_id = ele.parentNode.parentNode.children[0].innerHTML;
-  let present_location = ele.parentNode.parentNode.children[4].innerHTML;
+  let present_location = ele.parentNode.parentNode.children[3].innerHTML;
 
   let present_location_url =
     base_uri + "parcels/" + parcel_id + "/presentLocation";
