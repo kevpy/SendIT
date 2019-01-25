@@ -1,0 +1,23 @@
+{
+  "name": "sendit",
+  "version": "1.0.0",
+  "description": "A parcel courier service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevpy/SendIT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevpy/SendIT/issues"
+  },
+  "homepage": "https://github.com/kevpy/SendIT#readme",
+  "devDependencies": {
+    "cypress": "^3.1.4"
+  }
+}
